@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task 4. Registration Form</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand bg-success" data-bs-theme="dark">
+    <div class="container flex-wrap">
+      <a class="navbar-brand" href="index.html">Assignment 4</a>
+      <ul class="navbar-nav flex-wrap">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="task0.html">Task 0</a></li>
+        <li class="nav-item"><a class="nav-link" href="task1.html">Task 1</a></li>
+        <li class="nav-item"><a class="nav-link" href="task2.html">Task 2</a></li>
+        <li class="nav-item"><a class="nav-link" href="task3.html">Task 3</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="task4.html">Task 4</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container my-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h1 class="h3 mb-3">Task 4. Registration Form</h1>
+
+        <form id="registerForm" action="#" novalidate>
+          <div class="alert alert-success d-none success-message" role="alert">Registration completed successfully!</div>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="firstName" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First name"
+                     required minlength="2" maxlength="30"
+                     data-required="First name is required" data-invalid="First name must be at least 2 characters">
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback">First name is required</div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last name"
+                     required minlength="2" maxlength="30"
+                     data-required="Last name is required" data-invalid="Last name must be at least 2 characters">
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback">Last name is required</div>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com"
+                     required
+                     data-required="Email is required" data-invalid="Please enter a valid email address">
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback">Email is required</div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" name="password" placeholder="Password"
+                     required minlength="8" pattern="(?=.*[A-Za-z])(?=.*[0-9]).{8,}"
+                     data-required="Password is required"
+                     data-invalid="At least 8 characters, with a letter and a number">
+              <div class="form-text">Minimum 8 characters, letters and numbers.</div>
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback">Password is required</div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="confirmPassword" class="form-label">Confirm Password</label>
+              <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Repeat password"
+                     required data-match="#password"
+                     data-required="Please confirm your password">
+              <div class="valid-feedback">Passwords match!</div>
+              <div class="invalid-feedback">Please confirm your password</div>
+            </div>
+
+            <div class="col-md-6">
+              <span class="form-label d-block">Gender</span>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="genderMale" value="male" required>
+                <label class="form-check-label" for="genderMale">Male</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female" required>
+                <label class="form-check-label" for="genderFemale">Female</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="genderOther" value="other" required>
+                <label class="form-check-label" for="genderOther">Other</label>
+                <div class="invalid-feedback">Please select your gender</div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <span class="form-label d-block">Hobbies</span>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="hobbies" id="hobbyReading" value="reading">
+                <label class="form-check-label" for="hobbyReading">Reading</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="hobbies" id="hobbySports" value="sports">
+                <label class="form-check-label" for="hobbySports">Sports</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="hobbies" id="hobbyTravel" value="travel">
+                <label class="form-check-label" for="hobbyTravel">Travel</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="hobbies" id="hobbyGaming" value="gaming">
+                <label class="form-check-label" for="hobbyGaming">Gaming</label>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="country" class="form-label">Country</label>
+              <select class="form-select" id="country" name="country" required>
+                <option value="">Choose...</option>
+                <option value="kz">Kazakhstan</option>
+                <option value="ru">Russia</option>
+                <option value="us">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="de">Germany</option>
+              </select>
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback">Please select a country</div>
+            </div>
+
+            <div class="col-12">
+              <button type="submit" class="btn btn-success">Submit</button>
+              <button type="reset" class="btn btn-secondary">Reset</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="validation.js"></script>
+</body>
+</html>
