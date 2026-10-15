@@ -31,4 +31,4 @@ The website will be published using GitHub Pages.
 After deployment, the live website link will be added to this README.
 
 **GitHub Repository:** https://github.com/Nazar887667/4assignmentweb.git
-**Live Website:** https://Nazar887667.github.io/4assignmentweb.git
+**Live Website:** https://Nazar887667.github.io/4assignmentweb/
